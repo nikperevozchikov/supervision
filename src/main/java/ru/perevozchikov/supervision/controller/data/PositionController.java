@@ -7,8 +7,6 @@ import ru.perevozchikov.supervision.model.Position;
 import ru.perevozchikov.supervision.service.PositionService;
 import ru.perevozchikov.supervision.util.Utils;
 
-import java.util.Set;
-
 @RestController
 @RequestMapping("/api/positions")
 public class PositionController extends BasicDataController<Position, Integer> {
@@ -18,7 +16,7 @@ public class PositionController extends BasicDataController<Position, Integer> {
 
     @Override
     public Position getById(@PathVariable Integer id) {
-         Position position = service.getById(id);
+        Position position = service.getById(id);
         Utils.requireNonNull(position);
         return position;
     }

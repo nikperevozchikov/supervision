@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.perevozchikov.supervision.model.Event;
 import ru.perevozchikov.supervision.repository.EventRepository;
 import ru.perevozchikov.supervision.service.EventService;
-import ru.perevozchikov.supervision.service.user.EmployeeService;
 
 import javax.validation.Valid;
 import java.util.HashMap;

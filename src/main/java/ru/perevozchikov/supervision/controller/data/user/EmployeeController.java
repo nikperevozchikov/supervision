@@ -2,20 +2,17 @@ package ru.perevozchikov.supervision.controller.data.user;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import ru.perevozchikov.supervision.model.Employee;
 import ru.perevozchikov.supervision.model.Position;
-import ru.perevozchikov.supervision.repository.EmployeeRepository;
 import ru.perevozchikov.supervision.service.PositionService;
 import ru.perevozchikov.supervision.service.user.EmployeeService;
 import ru.perevozchikov.supervision.util.Utils;
 
-import javax.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/employees")

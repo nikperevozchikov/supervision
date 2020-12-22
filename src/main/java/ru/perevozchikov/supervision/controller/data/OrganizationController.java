@@ -53,6 +53,7 @@ public class OrganizationController {
 
         return ResponseEntity.ok().body(organization);
     }
+
     @PreAuthorize("hasAuthority('ADMIN') and hasAuthority('EMPLOYEE')")
     @PostMapping("/organizations")
     public Organization createOrganization(@Valid @RequestBody Organization organization) {

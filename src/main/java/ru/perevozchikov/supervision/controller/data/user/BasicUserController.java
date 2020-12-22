@@ -29,7 +29,7 @@ public abstract class BasicUserController<T extends User> extends BasicDataContr
 
     @PutMapping("/register")
     public T register(@RequestBody T user) {
-        if (getByLogin(user.getPassport())!= null || (user.getEmail() != null && getByLogin(user.getEmail()) != null)) {
+        if (getByLogin(user.getPassport()) != null || (user.getEmail() != null && getByLogin(user.getEmail()) != null)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
         user.setPassword(encoder.encode(user.getPassword()));
